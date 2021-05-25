@@ -17,8 +17,8 @@ Initially, the first gate was placed at level 30, and we're going to analyze an 
 
 Let the retention rate for gate_30 be P_30 and gate_40 be P_40    
 The hypothesis will be:   
-**H0:P_30=P_40**
-**HA:P_30>P_40**
+**H0:P_30=P_40**      
+**HA:P_30>P_40**    
 
 ## Data Preparation
 
