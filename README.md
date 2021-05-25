@@ -31,7 +31,7 @@ HA:P_30>P_40
 
 #### Data Description   
 
-<img width="650" style="text-align: center" alt="data shape" src="">  
+<img width="650" style="text-align: center" alt="data shape" src="/images/dataShape.png">  
 
 The data we have is from 90,189 players that installed the game while the AB-test was running.   
 When a player installed the game, he or she was randomly assigned to either **gate_30** or **gate_40**.   
@@ -46,12 +46,12 @@ The variables are:
 #### Data Summary
 
 **Import Data**   
-<img width="650" style="text-align: center" alt="data head" src="">   
+<img width="650" style="text-align: center" alt="data head" src="/images/dataHead.png">   
 Each unique user id was assigned a version either gate_30 or gate_40 and was record their total game rounds.   
 Then the retention status is that after installing day 1 and day 7, did the user come back and play the game?   
 
-**Check Sanity** 
-<img width="650" style="text-align: center" alt="check sanity" src="">  
+**Check Sanity**   
+<img width="650" style="text-align: center" alt="check sanity" src="/images/checkSanity2.png">  
 A sanity check is to see If there are roughly the same number of players in each gate_30 and gate_40 group.  
 And it looks like there is roughly the same number of players in each group.  
 
@@ -59,7 +59,7 @@ And it looks like there is roughly the same number of players in each group.
 
 #### Retention Rate     
    
-<img width="650" style="text-align: center" alt="rentention rate 1" src="">  
+<img width="650" style="text-align: center" alt="rentention rate 1" src="/images/rentention_1Rate.png">  
    
 There is a little less than half of the players come back one day after installing the game.   
     
@@ -67,7 +67,7 @@ The retention rate in day_1 in two versions:
 gate_30:  44.8%    
 gate_40:  44.2%   
   
-<img width="650" style="text-align: center" alt="rentention rate 7" src="">    
+<img width="650" style="text-align: center" alt="rentention rate 7" src="/images/rentention_7Rate.png">    
 
 The retention rate in day_7 in two versions:   
 gate_30:  19.0%    
@@ -81,7 +81,7 @@ Here we will use bootstrapping method to get at the certainty of these retention
 Because the data here is highly skewed and is hard to approximate with CLT, using bootstrapping method should give us a more accurate result than using an asymptotic normality-based approximation.   
 Bootstrap: A resampling method with replacement. Same sample size as the original sample data.   
   
-<img width="650" style="text-align: center" alt="bootstrap" src="">  
+<img width="650" style="text-align: center" alt="bootstrap" src="/images/bootstrap.png">  
   
 These two distributions above represent the bootstrap uncertainty over what the underlying 1-day retention could be for the two AB-groups.   
   
@@ -89,11 +89,11 @@ These two distributions above represent the bootstrap uncertainty over what the 
     
 **The difference in 1-day retention**     
   
-<img width="650" style="text-align: center" alt="diference" src="">   
+<img width="650" style="text-align: center" alt="diference" src="/images/difference.png">   
   
 From this chart, we can see that the most likely % difference is around 1% – 2% and that most of the distribution is above 0%, in favor of a gate at level 30.   
   
-<img width="650" style="text-align: center" alt="prob of diference" src="">    
+<img width="650" style="text-align: center" alt="prob of diference" src="/images/probOfDifference.png">    
   
 Calculating the probability that 1-day retention is greater when the gate is at level 30.  
 
@@ -108,15 +108,15 @@ So how about the 7-day retention?
 
 After having played for a week, more players should have reached level 40, and therefore it makes sense to also look at 7-day retention. 
   
-<img width="650" style="text-align: center" alt="7 diference" src="">  
+<img width="650" style="text-align: center" alt="7 diference" src="/images/7difference.png">  
 
 The probability of a difference: 100% 7-day retention is greater when the gate is at level 30.   
    
-<img width="650" style="text-align: center" alt="7 diference 2" src="">   
+<img width="650" style="text-align: center" alt="7 diference 2" src="/images/7 difference2.png">   
 
 #### P-value of Hypothesis   
 
-<img width="650" style="text-align: center" alt="formula" src="">  
+<img width="650" style="text-align: center" alt="formula" src="/images/formula.png">  
 
 <img width="650" style="text-align: center" alt="1P" src="/images/1P.png">  
 
@@ -126,11 +126,11 @@ The probability of a difference: 100% 7-day retention is greater when the gate i
 **x_1=20034** retention count for group gate_30  
 **x_2=20119** retention count for group gate_40  
 
-<img width="650" style="text-align: center" alt="p1d" src="">  
+<img width="650" style="text-align: center" alt="p1d" src="/images/p1d.png">  
   
 Since the **p-value is 0.117 greater than 0.05**, we **fail to reject** the null hypothesis. There’s no enough evidence to support that the 1-day retention rate for the gate at level 40 is greater than that for the gate at level 30.  
   
-<img width="650" style="text-align: center" alt="7P" src="">  
+<img width="650" style="text-align: center" alt="7P" src="/images/7P.png">  
 
 7 day Retention:  
 **n_1=44700** sample size for group gate_30  
@@ -138,7 +138,7 @@ Since the **p-value is 0.117 greater than 0.05**, we **fail to reject** the null
 **x_1=8502** retention count for group gate_30  
 **x_2=8279** retention count for group gate_40  
 
-<img width="650" style="text-align: center" alt="p7d" src="">  
+<img width="650" style="text-align: center" alt="p7d" src="/images/p7d.png">  
   
 Since the **p-value is 0.086 greater than 0.05**, we **fail to reject** the null hypothesis. There’s no enough evidence to support that the 7-day retention rate for the gate at level 40 is greater than that for the gate at level 30.  
 
