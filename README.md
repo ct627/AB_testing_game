@@ -112,11 +112,11 @@ After having played for a week, more players should have reached level 40, and t
 
 The probability of a difference: 100% 7-day retention is greater when the gate is at level 30.   
    
-<img width="650" style="text-align: center" alt="7 diference 2" src="/images/7 difference2.png">   
+<img width="400" style="text-align: center" alt="7 diference 2" src="/images/7 difference2.png">   
 
 #### P-value of Hypothesis   
 
-<img width="650" style="text-align: center" alt="formula" src="/images/formula.png">  
+<img width="400" style="text-align: center" alt="formula" src="/images/formula.png">  
 
 <img width="650" style="text-align: center" alt="1P" src="/images/1P.png">  
 
